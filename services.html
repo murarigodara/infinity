@@ -917,7 +917,7 @@
         }
 
 
-        body {
+        /* body {
             background-image: linear-gradient(45deg, #7175da, #9790F2);
             font-family: 'Muli', sans-serif;
             display: flex;
@@ -926,7 +926,7 @@
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
-        }
+        } */
 
         .courses-container {}
 
@@ -938,7 +938,7 @@
             max-width: 100%;
             margin: 20px;
             overflow: hidden;
-            width: 700px;
+            /* width: 700px; */
         }
 
         .course h6 {
@@ -957,7 +957,7 @@
             background-color: #2A265F;
             color: #fff;
             padding: 30px;
-            max-width: 250px;
+            max-width: 300px;
         }
 
         .course-preview a {
@@ -1019,6 +1019,37 @@
             bottom: 30px;
             right: 30px;
             letter-spacing: 1px;
+        }
+
+        #button-div-small {
+            display: none;
+        }
+
+        @media screen and (max-width: 720px) {
+            .course-preview {
+                background-color: #2A265F;
+                color: #fff;
+                padding: 30px;
+                max-width: 100%;
+            }
+
+            .course {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+                display: block;
+                max-width: 100%;
+                margin: 20px;
+                overflow: hidden;
+                /* width: 700px; */
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            #button-div-small {
+                display: block;
+                height: 60px;
+            }
         }
     </style>
     <!-- <link rel="stylesheet" href="hukfx.css"> -->
@@ -1125,7 +1156,7 @@
                 </div>
             </section> -->
             <section style="margin: 20px;">
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-header">
                         <h2>Simple Collapsible</h2>
                     </div>
@@ -1139,35 +1170,172 @@
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="courses-container">
                     <div class="course">
                         <div class="course-preview">
                             <h6>Course</h6>
                             <h2>JavaScript Fundamentals</h2>
-                            <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
+                            <!-- <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a> -->
                         </div>
                         <div class="course-info">
-                            <div class="progress-container">
+                            <!-- <div class="progress-container">
                                 <div class="progress"></div>
                                 <span class="progress-text">
                                     6/9 Challenges
                                 </span>
-                            </div>
+                            </div> -->
                             <h6>Chapter 4</h6>
                             <h2>Callbacks & Closures</h2>
-                            <button class="btn">Continue</button>
+                            <!-- <button class="btn">Continue</button> -->
+                            <div id="button-div-small"></div>
                             <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
-                            data-bs-target="#demo">Know More</button>
-                        <div id="demo" class="collapse">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
-                            data-bs-target="#demo">Minimize</button>
+                                data-bs-target="#demo" onclick="toggleElement(this)">Know More</button>
+                            <script>
+                                function toggleElement(e) {
+                                    console.log(e.innerText);
+                                    e.innerText = e.innerText == "KNOW MORE" ? "Minimize" : "Know More";
+                                    // console.log(window.innerWidth);
+                                    // console.log(e.previousElementSibling);
+                                    // let previousDiv = e.previousElementSibling;
+                                    // console.log(previousDiv.style.display);
+                                    // if (window.innerWidth <= 650) {
+                                    //     while (previousDiv.id !== "button-div-small" && previousDiv.previousElementSibling) {
+                                    //         console.log(previousDiv);
+                                    //         previousDiv = previousDiv.previousElementSibling;
+                                    //     }
+                                    //     // document.getElementById("button-div-small").
+                                    //     if (previousDiv.id == "button-div-small") {
+                                    //         previousDiv.style.display = (previousDiv.style.display == "" || "block") ? "none" : "block";
+                                    //     }
+                                    // }
+                                }
+                            </script>
+                            <div id="demo" class="collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div style="height: 60px;"></div>
+                                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+                                    data-bs-target="#demo">Minimize</button> -->
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="courses-container">
+                    <div class="course">
+                        <div class="course-preview">
+                            <h6>Course</h6>
+                            <h2>JavaScript Fundamentals</h2>
+                            <!-- <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a> -->
+                        </div>
+                        <div class="course-info">
+                            <!-- <div class="progress-container">
+                                <div class="progress"></div>
+                                <span class="progress-text">
+                                    6/9 Challenges
+                                </span>
+                            </div> -->
+                            <h6>Chapter 4</h6>
+                            <h2>Callbacks & Closures</h2>
+                            <!-- <button class="btn">Continue</button> -->
+                            <div id="button-div-small"></div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+                                data-bs-target="#demo1" onclick="toggleElement(this)">Know More</button>
+                            <script>
+                                function toggleElement(e) {
+                                    console.log(e.innerText);
+                                    e.innerText = e.innerText == "KNOW MORE" ? "Minimize" : "Know More";
+                                    // console.log(window.innerWidth);
+                                    // console.log(e.previousElementSibling);
+                                    // let previousDiv = e.previousElementSibling;
+                                    // console.log(previousDiv.style.display);
+                                    // if (window.innerWidth <= 650) {
+                                    //     while (previousDiv.id !== "button-div-small" && previousDiv.previousElementSibling) {
+                                    //         console.log(previousDiv);
+                                    //         previousDiv = previousDiv.previousElementSibling;
+                                    //     }
+                                    //     // document.getElementById("button-div-small").
+                                    //     if (previousDiv.id == "button-div-small") {
+                                    //         previousDiv.style.display = (previousDiv.style.display == "" || "block") ? "none" : "block";
+                                    //     }
+                                    // }
+                                }
+                            </script>
+                            <div id="demo1" class="collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div style="height: 60px;"></div>
+                                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+                                    data-bs-target="#demo">Minimize</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="courses-container">
+                    <div class="course">
+                        <div class="course-preview">
+                            <h6>Course</h6>
+                            <h2>JavaScript Fundamentals</h2>
+                            <!-- <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a> -->
+                        </div>
+                        <div class="course-info">
+                            <!-- <div class="progress-container">
+                                <div class="progress"></div>
+                                <span class="progress-text">
+                                    6/9 Challenges
+                                </span>
+                            </div> -->
+                            <h6>Chapter 4</h6>
+                            <h2>Callbacks & Closures</h2>
+                            <!-- <button class="btn">Continue</button> -->
+                            <div id="button-div-small"></div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+                                data-bs-target="#demo2" onclick="toggleElement(this)">Know More</button>
+                            <script>
+                                function toggleElement(e) {
+                                    console.log(e.innerText);
+                                    e.innerText = e.innerText == "KNOW MORE" ? "Minimize" : "Know More";
+                                    // console.log(window.innerWidth);
+                                    // console.log(e.previousElementSibling);
+                                    // let previousDiv = e.previousElementSibling;
+                                    // console.log(previousDiv.style.display);
+                                    // if (window.innerWidth <= 650) {
+                                    //     while (previousDiv.id !== "button-div-small" && previousDiv.previousElementSibling) {
+                                    //         console.log(previousDiv);
+                                    //         previousDiv = previousDiv.previousElementSibling;
+                                    //     }
+                                    //     // document.getElementById("button-div-small").
+                                    //     if (previousDiv.id == "button-div-small") {
+                                    //         previousDiv.style.display = (previousDiv.style.display == "" || "block") ? "none" : "block";
+                                    //     }
+                                    // }
+                                }
+                            </script>
+                            <div id="demo2" class="collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div style="height: 60px;"></div>
+                                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+                                    data-bs-target="#demo">Minimize</button> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1292,7 +1460,7 @@
 
 
 
-<div class="collapse navbar-collapse" id="navbarCollapse">
+<!-- <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="index.html">Home</a>
@@ -1301,8 +1469,8 @@
             <a class="nav-link active" href="services.html">Services</a>
         </li>
     </ul>
-    <!-- <form class="d-flex">
+    {<form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-    </form> -->
-</div>
+    </form> }
+</div> -->
