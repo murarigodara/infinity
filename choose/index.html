@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Why Choose Us Section Design With Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        .why-us h2 {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .why-us h2::after {
+            content: "";
+            width: 120px;
+            height: 3px;
+            display: inline-block;
+            background: #FFC107;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: -20px;
+            margin: 0 auto;
+        }
+
+        .why-us .box {
+            padding: 50px 30px;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.10);
+            transition: 0.5s;
+            position: relative;
+            background-color: #333;
+            max-height: 230px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .why-us .box:hover {
+            padding: 30px 30px 70px 30px;
+            box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.20);
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .why-us .box img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: all ease 1s;
+        }
+
+        .why-us .box:hover img {
+            opacity: 1;
+        }
+
+        .why-us .box span {
+            display: block;
+            font-size: 56px;
+            font-weight: 700;
+            color: #6b6060;
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            line-height: normal;
+        }
+
+        .why-us .box h4 a {
+            font-size: 24px;
+            font-weight: 600;
+            padding: 0;
+            margin: 20px 0;
+            color: #dadada;
+            text-decoration: none;
+        }
+
+        .why-us .box p {
+            color: #aaaaaa;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .why-us .box:hover span,
+        .why-us .box:hover h4 a,
+        .why-us .box:hover p {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2 class="mt-5 text-center">Why Choose Us</h2>
+                    <p class="mb-5 text-center">Why choose us section design HTML is created by using Bootstrap and
+                        custom HTML CSS. This our services section cards are more beautiful with pure CSS hover effects.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>01</span>
+                        <h4><a href="#">Why Lorem Ipsum</a></h4>
+                        <p>There are many variations of passages of available, but the majority have suffered alteration
+                            in some form</p>
+                        <img src="/images/image-one.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>02</span>
+                        <h4><a href="#">Why do we use it</a></h4>
+                        <p>There are many variations of Lorem Ipsum available, but the majority have suffered alteration
+                            in some form</p>
+                        <img src="/images/image-two.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>03</span>
+                        <h4><a href="#">Can I get some</a></h4>
+                        <p>There are many variations of Lorem Ipsum available, but the majority have suffered alteration
+                            in some form</p>
+                        <img src="/images/image-three.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>04</span>
+                        <h4><a href="#">Why Lorem Ipsum</a></h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, the majority have suffered
+                            alteration in some form</p>
+                        <img src="/images/image-four.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>05</span>
+                        <h4><a href="#">Why do we use it</a></h4>
+                        <p>There are many of passages of Lorem Ipsum available, but the majority have suffered
+                            alteration in some form</p>
+                        <img src="/images/image-five.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>06</span>
+                        <h4><a href="#">Can I get some</a></h4>
+                        <p>There are variations of passages of Lorem Ipsum available, but the majority have suffered
+                            alteration in some form</p>
+                        <img src="/images/image-six.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Why Us Section -->
+</body>
+
+</html>
