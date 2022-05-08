@@ -855,3 +855,31 @@ input[type=submit] {
 .why-us .box:hover p {
     color: #fff;
 }
+
+.display-block {}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+@media screen and (max-width: 480px) {
+    .display-inline-block {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .display-block {
+        display: block;
+    }
+
+    .margin-top-50 {
+        margin-top: 50px;
+    }
+}
+
+
+.margin-top-50 {
+
+}
+
