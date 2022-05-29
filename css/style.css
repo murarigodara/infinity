@@ -245,13 +245,13 @@ h3.section_header {
 
 .extra-heading {
     position: relative !important;
-    float: left;
+    /* float: left; */
     top: 0;
-    font-size: 140px !important;
+    font-size: 40px !important;
     line-height: 0.75 !important;
     padding-right: 15px !important;
-    letter-spacing: -0.1em;
-    text-indent: -0.1em;
+    /* letter-spacing: -0.1em; */
+    /* text-indent: -0.1em; */
     background: -webkit-linear-gradient(#2098ef, #55bce7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -273,7 +273,7 @@ h3.section_header {
 
 @media (max-width: 1199px) {
     .extra-heading {
-        font-size: 108px !important;
+        font-size: 40px !important;
         padding-right: 15px !important;
     }
 }
@@ -293,9 +293,9 @@ h3.section_header {
     }
 }
 
-.extra-heading.customcss {
+/* .extra-heading.customcss {
     font-size: 100px !important;
-}
+} */
 
 .mycustomcss {
     font-size: 22px !important;
@@ -875,6 +875,17 @@ input[type=submit] {
 
     .margin-top-50 {
         margin-top: 50px;
+    }
+
+    .extra-heading {
+        font-size: 30px !important;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    .extra-heading {
+        font-size: 23px !important;
     }
 }
 
